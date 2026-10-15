@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ScrollingVisual } from './ScrollingVisual'
-import { getImpact, getScrollImage, type Project } from './types'
+import { getImpact, getProjectImage, getScrollImage, type Project } from './types'
 
 export function ProjectVisual({
   project,
@@ -53,10 +53,12 @@ export function ProjectVisual({
     )
   }
 
+  const image = getProjectImage(project)
+
   return (
     <div className="project-visual">
       <img
-        src={project.image}
+        src={image}
         alt={`${project.title} screenshot`}
         loading="lazy"
         onError={() => setMode('overview')}

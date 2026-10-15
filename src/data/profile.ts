@@ -9,7 +9,7 @@ export const profile = {
   github: 'https://github.com/Ebrahim-Adel-Mahmoud',
   years: '5+',
   availability: 'Open to remote or hybrid',
-  cv: '/Ebrahim-Adel-CV.pdf',
+  cv: `${import.meta.env.BASE_URL}Ebrahim-Adel-CV.pdf`,
   summary:
     'Software Engineer focused on backend and full-stack delivery — production APIs, performance, and clean architecture across Java/Spring Boot and Laravel, with React when the product needs a full UI. I care about reliability, clear ownership, and measurable impact under real traffic.',
   heroLine: 'Software Engineer — backends that scale, products that ship.',

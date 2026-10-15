@@ -1,4 +1,5 @@
 import { projects } from '../../data/projects'
+import { asset } from '../../lib/asset'
 
 export type Project = (typeof projects)[number]
 export type Link = { label: string; href: string }
@@ -17,7 +18,12 @@ export const getHighlights = (project: Project): string[] =>
   'highlights' in project && project.highlights ? project.highlights : []
 
 export const getScrollImage = (project: Project) =>
-  'scrollImage' in project ? (project.scrollImage as string) : undefined
+  'scrollImage' in project && project.scrollImage
+    ? asset(project.scrollImage as string)
+    : undefined
+
+export const getProjectImage = (project: Project) =>
+  'image' in project && project.image ? asset(project.image as string) : undefined
 
 export const indexLabel = (index: number) => String(index + 1).padStart(2, '0')
 

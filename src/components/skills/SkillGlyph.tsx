@@ -161,7 +161,7 @@ export function SkillGlyph({ id, x, y, color }: { id: string; x: number; y: numb
         <g transform={`translate(${x}, ${y})`}>
           <rect x="-11" y="-11" width="22" height="22" rx="5" fill="#00758F" />
           <image
-            href="/icons/mysql.svg"
+            href={`${import.meta.env.BASE_URL}icons/mysql.svg`}
             x="-9"
             y="-7"
             width="18"
