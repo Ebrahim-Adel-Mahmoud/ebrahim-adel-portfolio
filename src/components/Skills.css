@@ -1,0 +1,184 @@
+/* ——— Skills constellation ——— */
+.skills-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 55% 45% at 65% 50%, rgba(0, 242, 255, 0.07), transparent 58%),
+    radial-gradient(ellipse 40% 35% at 18% 55%, rgba(52, 120, 246, 0.06), transparent 52%);
+}
+
+[data-theme='light'] .skills-section::before {
+  background:
+    radial-gradient(ellipse 55% 45% at 65% 50%, rgba(13, 148, 136, 0.08), transparent 58%),
+    radial-gradient(ellipse 40% 35% at 18% 55%, rgba(52, 120, 246, 0.05), transparent 52%);
+}
+
+.skills-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.skills-map {
+  --glow: #00e5f0;
+  --glow-mid: #2dd4bf;
+  --glow-soft: rgba(0, 229, 240, 0.55);
+  --map-bg: #0c1018;
+  --map-bg-2: #10161f;
+  --label: #e8eef7;
+  --label-soft: #a8b2c4;
+  --grid-line: rgba(255, 255, 255, 0.045);
+  position: relative;
+  width: 100%;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(ellipse 60% 50% at 55% 42%, rgba(0, 229, 240, 0.06), transparent 55%),
+    linear-gradient(165deg, var(--map-bg) 0%, var(--map-bg-2) 100%);
+  overflow: clip;
+  box-shadow:
+    0 0 0 1px rgba(0, 229, 240, 0.04),
+    0 28px 80px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme='light'] .skills-map {
+  --glow: #0d9488;
+  --glow-mid: #14b8a6;
+  --glow-soft: rgba(13, 148, 136, 0.4);
+  --map-bg: #ffffff;
+  --map-bg-2: #f3f6fb;
+  --label: #0b0d12;
+  --label-soft: #4a5568;
+  --grid-line: rgba(11, 13, 18, 0.07);
+  border-color: rgba(11, 13, 18, 0.1);
+  box-shadow: 0 24px 60px rgba(11, 13, 18, 0.1);
+}
+
+.skills-map__grid {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse 72% 68% at 52% 44%, #000 15%, transparent 78%);
+  pointer-events: none;
+}
+
+.skills-map__stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1040 / 640;
+  min-height: 460px;
+  padding-bottom: 4.5rem;
+}
+
+.skills-map__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Legend card */
+.skills-legend {
+  position: absolute;
+  left: 50%;
+  bottom: 1.1rem;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem 1.35rem;
+  padding: 0.7rem 1.2rem 0.8rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(12, 16, 24, 0.72);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  max-width: calc(100% - 2rem);
+}
+
+[data-theme='light'] .skills-legend {
+  border-color: rgba(11, 13, 18, 0.1);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 10px 28px rgba(11, 13, 18, 0.08);
+}
+
+.skills-legend__title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--label-soft);
+  white-space: nowrap;
+}
+
+.skills-legend__items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1.1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills-legend__item {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  color: var(--label);
+  font-weight: 500;
+}
+
+.skills-legend__cube {
+  display: block;
+  flex-shrink: 0;
+}
+
+.skills-fallback {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .skills-map__stage {
+    aspect-ratio: auto;
+    min-height: 0;
+    height: auto;
+  }
+
+  .skills-map__canvas,
+  .skills-map__grid,
+  .skills-legend {
+    display: none;
+  }
+
+  .skills-fallback {
+    display: grid;
+    gap: 1rem;
+    padding: 1.15rem;
+  }
+
+  .skills-fallback .skills-grid {
+    display: grid;
+    gap: 0.85rem;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 980px) {
+  .skills-map__stage {
+    min-height: 380px;
+  }
+}

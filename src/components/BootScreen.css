@@ -1,0 +1,123 @@
+.boot {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: #07090e;
+  color: #d7deea;
+}
+
+.boot__window {
+  width: min(100%, 560px);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0d121b;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+
+.boot__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #121826;
+}
+
+.boot__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.boot__dot--r {
+  background: #ff5f57;
+}
+
+.boot__dot--y {
+  background: #febc2e;
+}
+
+.boot__dot--g {
+  background: #28c840;
+}
+
+.boot__title {
+  margin-left: 0.45rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: rgba(215, 222, 234, 0.55);
+}
+
+.boot__body {
+  min-height: 240px;
+  padding: 1.1rem 1.15rem 1.25rem;
+  font-family: var(--mono);
+  font-size: clamp(0.78rem, 1.8vw, 0.9rem);
+  line-height: 1.65;
+}
+
+.boot__hint {
+  margin: 0 0 0.85rem;
+  color: rgba(139, 147, 167, 0.85);
+}
+
+.boot__line {
+  margin: 0 0 0.35rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.boot__line--cmd {
+  color: #f2f4f8;
+}
+
+.boot__line--out {
+  color: #9aa6bc;
+  padding-left: 0.15rem;
+}
+
+.boot__line--ok {
+  color: #8fd6b5;
+}
+
+.boot__prompt {
+  color: #3478f6;
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+
+.boot__ok {
+  color: #2dd4a8;
+  margin-right: 0.4rem;
+}
+
+.boot__caret {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 0.1em;
+  vertical-align: text-bottom;
+  background: #3478f6;
+  animation: boot-caret 0.85s steps(1, end) infinite;
+}
+
+@keyframes boot-caret {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boot__caret {
+    animation: none;
+  }
+}

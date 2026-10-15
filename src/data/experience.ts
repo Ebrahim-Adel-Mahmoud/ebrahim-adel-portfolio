@@ -1,0 +1,77 @@
+export const experience = [
+  {
+    company: 'Gomla.sa',
+    role: 'Backend Developer',
+    type: 'Remote · Product',
+    period: 'Nov 2025 — Present',
+    points: [
+      'Helped scale Gomla from ~2,000 to 80,000+ users across web and mobile apps.',
+      'Built Complete Profile growth flow that rewards users with 50 SAR for completing key data.',
+      'Shipped engagement systems: Go Win competitions, Scratch & Win, Roulette, surveys, badges, and wallet rewards.',
+      'Rebuilt weak search with MySQL FULLTEXT indexing, autocomplete, and suggestion APIs.',
+      'Implemented push notification platform (in-app + FCM) with scheduling and delivery tracking.',
+      'Owned Product/Offers/Promotions modules; improved API performance under growth; integrated payments and AI features.',
+    ],
+  },
+  {
+    company: 'Cleverness Agency',
+    role: 'Full-stack Developer',
+    type: 'Agency',
+    period: 'Oct 2024 — Nov 2025',
+    points: [
+      'Built Galsasa from scratch — sessions marketplace with booking, payments, venues, verification, and ratings (2,500+ users).',
+      'Refactored Hanqol (هنقول) customer + stores + delivery apps (Play/App Store) and Beituh from spaghetti code into clean, scalable architecture with major performance gains.',
+      'Shipped to-let (تولت) rental marketplace — Android + iOS apps and Filament admin dashboard (listings, chat, contracts, invoices).',
+      'Delivered backends with the team across Cleverness / The First Agency apps on App Store + Google Play: Hanqol, Al Zero, Taxi, E-school, Dhamani, MultiRestaurant, salon & more.',
+      'Shipped RoyaCode (royacode.com) — Saudi programming-agency marketing site for web, mobile, AI, and software services.',
+      'Built HI Gold from scratch — Islamic-compliant gold e-commerce with HMVC, Repository pattern, Filament admin, live gold pricing, and payments.',
+      'Built Agency Work Tracker CRM in React for The First Agency: projects/tasks, teams, reminders, and delivery visibility (Figma-backed dashboard).',
+      'Owned shared API patterns for auth, orders, roles, and notifications across multi-app products.',
+    ],
+  },
+  {
+    company: 'Geel Tech',
+    role: 'Full-stack Developer',
+    type: 'Client / Production',
+    period: 'Production systems',
+    points: [
+      'Razan / Elite POS — multi-tenant cashier platform: 53 stores (52 active), 68,115+ catalog items, invoices, stock, and barcode sync.',
+      'Dabbas Psychiatry Clinics (dpc.jo) — production refactor for a 10,000+ patient clinic: query performance, API security, and booking stability.',
+      'Najeeb (نجيب) education APIs — lessons, courses, exams, and subscription/QR activation for a live Google Play app (500+ downloads).',
+      'Delivery Al Maslaha — production bug fixes, query performance, and delivery/order workflow stabilization.',
+    ],
+  },
+  {
+    company: 'Magd Soft',
+    role: 'Full-stack Developer',
+    type: 'Software House',
+    period: 'Jul 2022 — Aug 2024',
+    points: [
+      'Built Barqiaty (barqiaty.sa) — Saudi official-telegram platform with dashboard for send/print/track operations (20K+ clients, 13K+ telegrams).',
+      'Built SonicMobility — scooter micromobility Android + iOS apps and ops dashboard for New Cairo (10K+ Play downloads).',
+      'Built scalable Laravel backends with clean architecture and solid API contracts.',
+      'Shipped React frontends consuming REST APIs for selected product surfaces.',
+    ],
+  },
+  {
+    company: 'Freelance',
+    role: 'Full-stack Developer',
+    type: 'Independent',
+    period: 'Alongside agency work',
+    points: [
+      'Oscello Egypt Export — marble/granite export site + Filament admin dashboard (multilingual catalog).',
+      'Bishyaka — fashion e-commerce storefront (AR/EN) with collections, flash sales, and checkout flows.',
+      'Tourist Street (ts.royacode.com) — personal multi-vendor abayas marketplace: web, mobile APIs, and dashboard.',
+    ],
+  },
+  {
+    company: 'Ideas & More',
+    role: 'PHP Developer',
+    type: 'Agency',
+    period: 'Jul 2021 — May 2022',
+    points: [
+      'Delivered websites and online stores with PHP, Laravel, MySQL, and Bootstrap.',
+      'Implemented CRUD systems and end-to-end storefront features.',
+    ],
+  },
+]
